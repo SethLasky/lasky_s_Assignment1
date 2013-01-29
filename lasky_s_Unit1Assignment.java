@@ -17,8 +17,21 @@ public class lasky_s_Unit1Assignment
      
        
      }
-
      
+      for(int i = 0; i < list.length; i++)
+     {
+       int keyB = list[i];
+       int binary = seqSearch(list, keyB);
+       System.out.println("Using Linear Search the number of iterations to find " + keyB
+                            + " is " + binary);
+       binaryIteration = binaryIteration + binary;
+       
+     
+       
+     }
+
+     int averageBinIter = 0;
+     int averageSeqIter = 0;
      
    }
    
