@@ -6,6 +6,7 @@ public class lasky_s_Unit1Assignment
      int[] list = {4, 9, 17, 35, 46, 55, 63, 80, 81, 89, 92, 95, 102, 113, 128, 143, 162, 169, 171, 199};
      int linearIteration = 0;
      int binaryIteration = 0;
+     //2. Search for each element using linear search and print out the number of iterations before the item is found.
      for(int x = 0; x < list.length; x++)
      {
        int key = list[x];
@@ -17,21 +18,30 @@ public class lasky_s_Unit1Assignment
      
        
      }
+     //3. Now use binary search and print the same information.
      
       for(int i = 0; i < list.length; i++)
      {
        int keyB = list[i];
-       int binary = seqSearch(list, keyB);
-       System.out.println("Using Linear Search the number of iterations to find " + keyB
+       int binary = binSearch(list, keyB);
+       System.out.println("Using Binary Search the number of iterations to find " + keyB
                             + " is " + binary);
        binaryIteration = binaryIteration + binary;
        
      
        
      }
-
+      //4. Print the average number of iterations for each search.
+      
      int averageBinIter = 0;
      int averageSeqIter = 0;
+     
+     averageSeqIter = linearIteration / list.length;
+     averageBinIter = binaryIteration / list.length;
+     
+     System.out.println("The average number of iterations for a Linear Search is " + averageSeqIter);
+     System.out.println("The average number of iterations for a Binary Search is " + averageBinIter);
+     
      
    }
    
